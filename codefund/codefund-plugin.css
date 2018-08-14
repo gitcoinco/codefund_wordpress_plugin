@@ -1,0 +1,23 @@
+.advertiser-text {
+  margin-right: 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background-color: #08c;
+  color: #fafafa;
+  width: 6em;
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 97px;
+  margin-bottom: 10px;
+}
+#codefund-ad {
+  display: inline-block;
+}
+
+.cf-wrapper a{
+	box-shadow: none;
+}
+
+.cf-powered-by img {
+  display: none;
+}

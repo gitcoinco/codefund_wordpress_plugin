@@ -17,6 +17,7 @@ function embed_script() {
   $options = get_option('codefund_options');
   ?>
   <script src="https://codefund.io/scripts/<?php echo $options['property_id']; ?>/embed.js"></script>
+  <link rel="stylesheet" id="codefund-plugin-css" href="./wp-content/plugins/codefund/codefund-plugin.css" type="text/css" media="all">
   <script>
     var $ = jQuery;
     $(function() {
@@ -59,11 +60,11 @@ function append_ads( $content )
     }
 
     if($nr == 0) {
-      $div = '<div><div><b>' .$advertiser_text . '</b><div><div id="codefund_ad"></div></div>';
+      $div = '<div><div class ="advertiser-text">' . $advertiser_text . '</div><div id="codefund_ad"></div></div>';
       ++$nr;
     }
     else if (0 === ++$nr % $options['frequency']){
-      $div = '<div><div><b>' .$advertiser_text . '</b></div><div id="codefund_ad_' . ($nr / $options['frequency']) .  '" class="codefund_additional_ad"></div></div>';
+      $div = '<div><div class="advertiser-text">' . $advertiser_text . '</div><div id="codefund_ad_' . ($nr / $options['frequency']) .  '" class="codefund_additional_ad"></div></div>';
     }
 
     $content .= $div;
